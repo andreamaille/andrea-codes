@@ -1,0 +1,53 @@
+.skills {
+    background-color: $secondaryColor;
+    position: relative;
+    z-index: -20;
+    .background-triangle{
+        background-color:$backgroundColor;
+        width:75%;
+        height:100%;
+        clip-path: polygon(100% 0, 3% 100%, 100% 100%);
+        position: absolute;
+        right:0;
+        bottom:0;
+        z-index: -10;
+    }
+}
+
+.skills h3 {
+    margin:50px 0 20px 0;
+}
+
+.skills li {
+    margin:8px;
+}
+
+.in-progress-skills,
+.skills-list ul {
+    @include alignment (row, center, center, center);
+    flex-wrap: wrap;
+}
+
+.currently-learning,
+.interested-in {
+    width: 48%;
+}
+
+.interested-in ul,
+.currently-learning ul {
+    @include alignment (row, center, center, left);
+    flex-wrap: wrap;
+}
+
+
+
+@media (max-width: 600px) {
+    .in-progress-skills {
+        flex-direction: column;
+    }
+
+    .currently-learning,
+    .interested-in {
+        width: 100%;
+    }
+}

@@ -1,0 +1,78 @@
+body,
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width:85%;
+}
+
+ul, 
+li, 
+img,
+h1,
+h3 {
+    margin:0;
+	padding:0;
+}
+
+img {
+	width: 100%;
+	max-width:100%;
+}
+
+a {
+    text-decoration: none;
+    color: $contrastColor;
+}
+
+ul, 
+li {
+	list-style-type: none;
+}
+
+button,
+.bio-links a {
+    @include colors ($white, $contrastColor);
+    border: none;
+    padding:10px 25px;
+    border-radius: 25px;
+    margin: 15px 0;
+    transition: background 0.5s ease-out;
+    &:hover {
+        @include colors ($contrastColor, $secondaryColor);
+    }
+    &:focus, 
+    &:active {
+        @include colors ($contrastColor, $backgroundColor);
+    }
+}
+
+section {
+    padding: 75px 0;
+    
+}
+
+i {
+    color: $contrastColor;
+    transition: color 0.5s ease-out;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $highlightColor;
+    }
+}
+
+footer {
+    padding: 10px 0;
+    background-color: $backgroundColor;
+}
+
+
+@media (max-width: 575px) {
+    .wrapper {
+        width:90%;
+    }
+    
+}

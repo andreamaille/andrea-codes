@@ -1,0 +1,21 @@
+$primaryColor: #f0f5f7;
+$backgroundColor: #f0e5de;
+$secondaryColor: #e1eef6;
+$highlightColor: #8283a7;
+$contrastColor: #282c37;
+$white: #f0f5f7;
+
+$border: 2px solid $highlightColor;
+
+@mixin alignment ($flex-direction, $justify-content, $align-items, $text-align) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    text-align: $text-align;
+}
+
+@mixin colors ($color, $background-color) {
+    color:$color;
+    background-color:$background-color;
+}

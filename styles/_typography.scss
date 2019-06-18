@@ -1,0 +1,150 @@
+@mixin displayFont ($sizeValue) {
+    font-size: ($sizeValue/20) * 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color:$highlightColor;
+    line-height: 1.2;
+}
+
+@mixin titleFont ($sizeValue) {
+    font-size: ($sizeValue/20) * 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+@mixin bodyFont ($sizeValue) {
+    font-size: ($sizeValue/20) * 1rem;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+}
+// General
+html {
+    font-size: 125%;
+}
+
+button {
+    @include bodyFont (20);
+    text-transform: uppercase;
+}
+
+h2 {
+    @include titleFont (35);
+    font-weight: 300;
+    width:100%;
+    text-align: center;
+}
+
+h2::before {
+    content:"";
+    display: block;
+    width: 30px;
+    height:1.5px;
+    margin: 0 auto 12px;
+    background-color: $contrastColor;
+}
+
+h3 {
+    @include titleFont (28);
+    font-weight: 600;
+}
+
+p, 
+li,
+.bio-links a,
+footer {
+    @include bodyFont (20);
+}
+
+// Header
+.header-text p {
+    @include titleFont (40);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+h1 p:first-child {
+    @include displayFont(75);
+    letter-spacing: 3px;
+}
+
+h1 p:last-child {
+    @include titleFont (25);
+    font-weight: 600;
+}
+
+nav li {
+    @include titleFont (20);
+    font-weight: 300;
+}
+
+.exit-responsive {
+    font-size: 2rem;
+}
+
+// Skills
+
+.skills h3 {
+    text-align: center;
+}
+
+.skills-icons i {
+    font-size: 4.5rem;
+}
+
+// contact
+.social-media-icons i {
+    font-size: 1.5rem;
+}
+
+input[type=text]::placeholder,
+textarea::placeholder {
+    @include bodyFont (20);
+    text-transform: uppercase;
+}  
+
+// Footer 
+footer {
+    text-align: center;
+}
+
+
+@media (max-width: 1150px) {
+    .header-text p {
+        @include titleFont (35);
+    }
+
+    h1 p:first-child {
+        @include displayFont(60);
+    }
+
+    h1 p:last-child {
+        @include titleFont (20);
+    }
+}
+
+@media (max-width: 700px) {
+    p,
+    .project-skills ul li {
+        font-size:0.9rem;
+    }
+
+    .header-text p {
+        @include titleFont (25);
+    }
+
+    h1 p:first-child {
+        @include displayFont(38);
+    }
+
+    h1 p:last-child {
+        @include titleFont (18);
+    }
+
+    .skills-icons i {
+        font-size: 3rem;
+    }
+
+
+}
