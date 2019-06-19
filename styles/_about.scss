@@ -5,6 +5,7 @@
 .about p {
     margin: 0;
     margin-bottom:15px;
+    width:95%;
 }
 .about-content {
     @include alignment (row, space-between, flex-start, left);
@@ -41,6 +42,10 @@
         .about-bio {
             width: 100%;
         }
+    }
+
+    .about p {
+        margin: 25px auto;
     }
 }
 

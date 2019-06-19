@@ -69,6 +69,11 @@ footer {
     background-color: $backgroundColor;
 }
 
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
 
 @media (max-width: 575px) {
     .wrapper {

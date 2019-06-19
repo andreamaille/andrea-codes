@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: flex-start;
     text-align: left;
+    margin-top:100px;
 }
 
 .project-details li:nth-child(odd){
@@ -13,12 +14,14 @@
     flex-direction: row-reverse;
 }
 
-.project-image,
+
 .project-info {
     width: 50%;
-    margin-top:100px;
 }
 
+.project-image {
+    width: 48%;
+}
 .project-skills ul {
     @include alignment (row, space-between, flex-start, left); 
     flex-wrap: wrap;
@@ -85,6 +88,10 @@
         width: 80%;
         margin: 0 auto;
         margin-top:25px;
+    }
+
+    .project-links ul {
+        margin:20px;
     }
 
 }

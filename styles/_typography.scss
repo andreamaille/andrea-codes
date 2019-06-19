@@ -74,13 +74,22 @@ h1 p:last-child {
     font-weight: 600;
 }
 
-nav li {
+.desktop-nav li,
+.mobile-nav li,
+.logo {
     @include titleFont (20);
     font-weight: 300;
 }
 
+
 .exit-responsive {
     font-size: 2rem;
+}
+
+// portfolio section 
+
+.portfolio p {
+    line-height: 1.2;
 }
 
 // Skills

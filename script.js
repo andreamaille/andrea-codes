@@ -51,13 +51,18 @@ app.changeColor = function () {
 }
 
 app.hamburger = function () {
-    $('.hamburger').on('click', function () {
-        $('nav').slideToggle('show')
-    })
+    $('.hamburger').click(function () {
+        $(this).toggleClass('active');
+        $('nav').toggleClass('show');
+        
+    });
+    // $('.hamburger').on('click', function () {
+    //     $('nav').slideToggle('show')
+    // })
 
-    $('.exit-responsive').on('click', function () {
-        $('nav').slideToggle('show')
-    })
+    // $('.exit-responsive').on('click', function () {
+    //     $('nav').slideToggle('show')
+    // })
 }
 
 app.random = function randomItem(optionsArray) {
