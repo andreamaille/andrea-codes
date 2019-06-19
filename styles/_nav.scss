@@ -101,8 +101,9 @@
     justify-content: center;
 }
 
+
+
 nav li a {
-    position: relative;
     &:hover::before {
         content:"";
         width: 30px;
@@ -110,7 +111,7 @@ nav li a {
         position: absolute;
         margin-top:-8px;
         margin-left:2px;
-        background-color: $contrastColor;
+        background-color:$contrastColor;
         animation: scale-up-hor-left 0.2s linear 1;
     }
     &:active, 
@@ -168,8 +169,14 @@ nav li a {
         flex-direction: column;
         text-align: center;
         li {
-            margin: 15px;
+            margin: 25px;
         }
+
+
+    }
+
+    .show.desktop-nav ul li a {
+        padding:5px;
     }
 
     .show.desktop-nav .logo {

@@ -1,7 +1,15 @@
 header {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    position: relative;
+
+}
+
+.header-background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
 }
 
 .header-background,
@@ -17,9 +25,22 @@ header {
     height:100vh;
 }
 
+
+
 .small-triangle, 
 .guillotine-triangle {
     width:70%;
+    height: 100vh;
+}
+
+.small-triangle {
+    bottom:0;
+    left:0;
+}
+
+.guillotine-triangle {
+    bottom:0;
+    right:0;
 }
 
 .header-content, 
@@ -37,17 +58,30 @@ header {
         bottom:0;
         z-index: -30;
     }
-    .guillotine-triangle {
-        background-color:$primaryColor;
-        clip-path: polygon(45% 0, 100% 0%, 100% 100%, 0% 100%);
-        right:0;
-        z-index: -20;
-    }
+}
+
+.guillotine-triangle,
+.secondary-guillotine-triangle {
+    background: url(../assets/head-shot-2.png) right bottom/ contain no-repeat;
+    background-size: 440px;
+    clip-path: polygon(45% 0, 100% 0%, 100% 100%, 0% 100%);
+    right:0;
+    z-index: -20;
+}
+
+
+.guillotine-triangle {
+    background-color: $primaryColor;
+}
+
+.secondary-guillotine-triangle {
+    background-color: $secondaryColor;
 }
 
 .secondary-header-background {
     background-color:$primaryColor;
     z-index: -10;
+
     .secondary-small-triangle {
         height:50%;
         background-color: $backgroundColor;
@@ -55,18 +89,11 @@ header {
         bottom:0;
         z-index: -30;
     }
-    .secondary-guillotine-triangle {
-    background-color: $secondaryColor;
-    clip-path: polygon(45% 0, 100% 0%, 100% 100%, 0% 100%);
-    right:0;
-    z-index: -20;
-    }
+    
 }
 
-.small-triangle, 
-.secondary-small-triangle {
-    overflow: hidden;
-}
+
+
 
 header p {
     margin:0;
@@ -108,37 +135,7 @@ header p {
 
 .header-main {
     @include alignment (row, space-between, center, left);
-    .header-image {
-        width:32%;
-        height:550px;
-        background: url(../assets/head-shot-2.png) left / cover no-repeat;
-        right:0;
-        bottom:0;
-    }
 }
-
-
-// .show.nav{
-// 	display: none;
-// }
-
-// .responsive-nav,
-// .exit-responsive {
-//     display:none;
-// }
-
-// .hamburger span {
-//     background-color:$contrastColor;
-//     width:45px;
-//     height:3px;
-//     margin:0 0 10px;
-//     border-radius: 2px 2px 2px 2px;
-//     display:block;
-// }
-
-// .hamburger:hover span {
-//     background-color:$highlightColor;
-// }
 
 
 
@@ -165,37 +162,14 @@ header p {
     }
 }
 
+@media (max-width:900px) {
+    .guillotine-triangle,
+    .secondary-guillotine-triangle {
+        background-size: 375px;
+    }
+}
+
 @media (max-width:812px) {
-    // .exit-responsive,
-    // .responsive-nav {
-    //     display:block;
-    // }
-
-    // .responsive-nav {
-    //     @include alignment (row, space-between, center, center);
-    // }
-
-	// nav {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	right: 0;
-	// 	bottom: 0;
-	// 	background: $primaryColor;
-    //     height:100vh;
-    //     z-index: 1000;
-    // }
-    
-    // nav ul {
-    //     flex-direction: column;
-    //     margin-top:50px;
-    //     li {
-    //         margin: 30px;
-    //     }
-    // }
-
-
-
 
     .header-content {
         display: block;
@@ -213,25 +187,20 @@ header p {
         .header-text {
             width:95%;
         }
-        .header-image {
-            width:45%;
-            height: 350px;
-            z-index: -5;
-        }
     }
 
     .header-text p:last-child {
         width: 90%;
     }
-}
 
+}
 
 
 @media (max-width:550px) {
     .header-main {
         .header-image {
             width:60%;
-            height:320px;
+            height:50vh;
         }
     }
 
@@ -243,8 +212,32 @@ header p {
         font-size: 1rem;
     }
 
+    .guillotine-triangle,
+    .secondary-guillotine-triangle {
+        background-size: 300px;
+    }
 }
 
+@media (max-width:450px) {
+    .guillotine-triangle,
+    .secondary-guillotine-triangle {
+        background-size: 300px;
+    }
+}
+
+@media (max-width:400px) {
+    .guillotine-triangle,
+    .secondary-guillotine-triangle {
+        background-size: 225px;
+    }
+}
+
+@media (max-height:500px) {
+    .guillotine-triangle,
+    .secondary-guillotine-triangle {
+        background-size: 250px;
+    }
+}
 
 
 
@@ -256,7 +249,6 @@ header p {
 
     .header-main .header-image {
         width:30%;
-        height: 330px;
     }
     
 }
@@ -270,7 +262,4 @@ header p {
         width: 70%;
     }
 
-    // header {
-    //     height:550px;
-    // }
 }
