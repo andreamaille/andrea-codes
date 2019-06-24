@@ -1,11 +1,19 @@
-// .header-wrapper {
-//     width: 100%;
-//     max-width: 1440px;
-// }
-.header-background {
+header p {
+    margin:0;
+    padding:0;
+}
+
+.header-background,
+.header-content {
     width: 100%;
-    max-width: 1440px;
-    height: 100vh;
+}
+
+.header-background,
+.guillotine-triangle,
+.small-triangle,
+.header-content,
+.header-background {
+    height:100vh;
 }
 
 .header-background,
@@ -14,18 +22,9 @@
     position: absolute;
 }
 
-.header-background,
-.guillotine-triangle,
-.header-content {
-    height:100vh;
-}
-
-
-
 .small-triangle, 
 .guillotine-triangle {
     width:70%;
-    height: 100vh;
 }
 
 .small-triangle {
@@ -38,21 +37,32 @@
     right:0;
 }
 
-.header-content, 
-.header-background {
-    width: 100%;
-}
 
-.header-background {
-    background-color: $backgroundColor;
+// Header background colors change on click 
+.header-background,
+.secondary-header-background {
     z-index: -10;
-    .small-triangle {
+    .small-triangle,
+    .secondary-small-triangle {
         height:50%;
-        background-color: $secondaryColor;
         clip-path: polygon(0 0, 0% 100%, 100% 100%);
         bottom:0;
         z-index: -30;
     }
+}
+
+.header-background {
+    background-color: $backgroundColor;
+    .small-triangle {
+        background-color: $secondaryColor;
+    }
+}
+
+.secondary-header-background {
+    background-color:$primaryColor;
+    .secondary-small-triangle {
+        background-color: $backgroundColor;
+    } 
 }
 
 .guillotine-triangle,
@@ -64,7 +74,6 @@
     z-index: -20;
 }
 
-
 .guillotine-triangle {
     background-color: $primaryColor;
 }
@@ -73,26 +82,11 @@
     background-color: $secondaryColor;
 }
 
-.secondary-header-background {
-    background-color:$primaryColor;
-    z-index: -10;
 
-    .secondary-small-triangle {
-        height:50%;
-        background-color: $backgroundColor;
-        clip-path: polygon(0 0, 0% 100%, 100% 100%);
-        bottom:0;
-        z-index: -30;
-    }
-    
-}
+// Main content 
 
-
-
-
-header p {
-    margin:0;
-    padding:0;
+.header-main {
+    @include alignment (row, space-between, center, left);
 }
 
 .header-content {
@@ -103,7 +97,6 @@ header p {
         margin-bottom: 10px;
     }
 }
-
 
 .bars {
     @include alignment (row, space-between, flex-end, center);
@@ -123,16 +116,9 @@ header p {
     }
 }
 
-
 .bars:hover {
     cursor: pointer;
 }
-
-.header-main {
-    @include alignment (row, space-between, center, left);
-}
-
-
 
 
 .header-social-icons ul {
@@ -149,11 +135,11 @@ header p {
 
 
 
+// Media Queries 
+
 @media (max-width: 1150px) {
-    .header-main {
-        .header-image {
-            width:43%;
-        }
+    .header-main .header-image {
+        width:43%;
     }
 }
 
@@ -165,7 +151,6 @@ header p {
 }
 
 @media (max-width:812px) {
-
     .header-content {
         display: block;
     }
@@ -175,7 +160,6 @@ header p {
         bottom:3%;
         left:8%;
     }
-
 
     .header-main {
         margin-top:50px;
@@ -187,16 +171,12 @@ header p {
     .header-text p:last-child {
         width: 90%;
     }
-
 }
 
-
 @media (max-width:550px) {
-    .header-main {
-        .header-image {
-            width:60%;
-            height:50vh;
-        }
+    .header-main .header-image {
+        width:60%;
+        height:50vh;
     }
 
     .header-content h1 {
@@ -228,7 +208,7 @@ header p {
 }
 
 
-
+// Height Queries 
 
 @media (max-height:500px) {
     .guillotine-triangle,
@@ -256,5 +236,4 @@ header p {
     .header-text p:last-child {
         width: 70%;
     }
-
 }
