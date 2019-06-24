@@ -41,7 +41,8 @@ button,
     margin: 15px 0;
     transition: background 0.5s ease-out;
     &:hover {
-        @include colors ($contrastColor, $secondaryColor);
+        background-color: lighten($contrastColor,30%);
+        
     }
     &:focus, 
     &:active {
