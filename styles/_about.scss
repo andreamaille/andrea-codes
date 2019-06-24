@@ -1,12 +1,12 @@
 .about {
     @include colors ($contrastColor, $white);
+    p {
+        margin: 0;
+        margin-bottom:15px;
+        width:95%;
+    }
 }
 
-.about p {
-    margin: 0;
-    margin-bottom:15px;
-    width:95%;
-}
 .about-content {
     @include alignment (row, space-between, flex-start, left);
     margin-top:50px;
@@ -32,8 +32,6 @@
 .bio-links {
     margin-top:30px;
 }
-    
-
 
 @media (max-width:1150px) {
     .about-content {
@@ -43,7 +41,6 @@
             width: 100%;
         }
     }
-
     .about p {
         margin: 25px auto;
     }

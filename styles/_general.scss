@@ -43,7 +43,6 @@ button,
     transition: background 0.5s ease-out;
     &:hover {
         background-color: lighten($contrastColor,30%);
-        
     }
     &:focus, 
     &:active {
@@ -80,6 +79,5 @@ footer p {
 @media (max-width: 575px) {
     .wrapper {
         width:90%;
-    }
-    
+    }  
 }

@@ -14,7 +14,6 @@
     flex-direction: row-reverse;
 }
 
-
 .project-info {
     width: 50%;
 }
@@ -72,7 +71,6 @@
     }
 }
 
-
 .project-info p a:hover {
     background-color:$backgroundColor;
 }
@@ -82,18 +80,15 @@
     .project-details li:nth-child(even){
         flex-direction: column;
     }
-
     .project-image,
     .project-info {
         width: 80%;
         margin: 0 auto;
         margin-top:25px;
     }
-
     .project-links ul {
         margin:20px;
     }
-
 }
 
 @media (max-width: 500px) {
@@ -101,9 +96,7 @@
     .project-info {
         width: 100%;
     }
-
     .project-links ul {
         margin: 10px;
     }
-
 }

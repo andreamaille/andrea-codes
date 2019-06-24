@@ -13,7 +13,6 @@
     .social-media {
         width: 39%;
     }
-    
     .contact-form {
         width: 59%;
     }
@@ -54,7 +53,6 @@
     }
 }
 
-
 @media (max-width: 725px) {
     .contact-info {
         flex-direction: column;
@@ -63,7 +61,6 @@
             width: 100%;
         }
     }
-
 }
 
 @media (max-width: 425px) {
@@ -76,5 +73,4 @@
             padding:5px;
         }   
     }
-
 }
