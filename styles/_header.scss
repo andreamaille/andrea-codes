@@ -98,6 +98,7 @@ header p {
     @include alignment (row, space-between, flex-end, center);
     width:40px;
     margin: 0 auto;
+    z-index: -10;
     .short-bar {
         display:block;
         background-color:$contrastColor;
@@ -141,6 +142,7 @@ header p {
 @media (max-width:812px) {
     .header-content {
         display: block;
+        position:relative;
     }
 
     .bars {
@@ -178,7 +180,7 @@ header p {
 
     .bars {
         bottom:1%;
-        left:8%;
+        left:5%;
     }
 
 }

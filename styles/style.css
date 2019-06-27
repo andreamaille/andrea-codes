@@ -497,7 +497,8 @@ header p {
   align-items: flex-end;
   text-align: center;
   width: 40px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: -10; }
   .bars .short-bar {
     display: block;
     background-color: #282c37;
@@ -540,7 +541,8 @@ header p {
 
 @media (max-width: 812px) {
   .header-content {
-    display: block; }
+    display: block;
+    position: relative; }
   .bars {
     position: absolute;
     bottom: 1%;
@@ -562,7 +564,7 @@ header p {
     background-size: 300px; }
   .bars {
     bottom: 1%;
-    left: 8%; } }
+    left: 5%; } }
 
 @media (max-width: 450px) {
   .guillotine-triangle,
