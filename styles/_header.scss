@@ -81,7 +81,6 @@ header p {
     background-color: $secondaryColor;
 }
 
-
 .header-main {
     @include alignment (row, space-between, center, left);
 }
@@ -193,6 +192,30 @@ header p {
 
 
 // Height Queries 
+
+@media (max-width:812px) and (min-height: 1000px) {
+    .header-main {
+        margin-top:175px;
+    }
+}
+
+
+// iphone X
+@media (max-width:375px) and (min-height: 812px) {
+    .guillotine-triangle,
+    .secondary-guillotine-triangle {
+        background-size: 250px;
+    }
+}
+
+
+@media (max-height:812px) {
+    .header-main {
+        margin-top:100px;
+    }
+}
+
+
 @media (max-height:500px) {
     .guillotine-triangle,
     .secondary-guillotine-triangle {
@@ -205,12 +228,6 @@ header p {
 
 }
 
-@media (min-width: 812px) and (max-height:375px) {
-    .header-main {
-        margin-top:75px;
-    }
-    
-}
 
 @media (max-height:414px) {
     .header-main {
