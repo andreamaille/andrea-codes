@@ -145,8 +145,8 @@ header p {
 
     .bars {
         position: absolute;
-        bottom:3%;
-        left:8%;
+        bottom:1%;
+        left:50%;
     }
 
     .header-main {
@@ -161,6 +161,7 @@ header p {
     }
 }
 
+
 @media (max-width:550px) {
     .header-content h1 {
         margin-bottom: 5px;
@@ -174,6 +175,12 @@ header p {
     .secondary-guillotine-triangle {
         background-size: 300px;
     }
+
+    .bars {
+        bottom:1%;
+        left:8%;
+    }
+
 }
 
 @media (max-width:450px) {

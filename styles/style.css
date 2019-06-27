@@ -543,8 +543,8 @@ header p {
     display: block; }
   .bars {
     position: absolute;
-    bottom: 3%;
-    left: 8%; }
+    bottom: 1%;
+    left: 50%; }
   .header-main {
     margin-top: 50px; }
     .header-main .header-text {
@@ -559,7 +559,10 @@ header p {
     font-size: 1rem; }
   .guillotine-triangle,
   .secondary-guillotine-triangle {
-    background-size: 300px; } }
+    background-size: 300px; }
+  .bars {
+    bottom: 1%;
+    left: 8%; } }
 
 @media (max-width: 450px) {
   .guillotine-triangle,
