@@ -118,9 +118,8 @@ header p {
 }
 
 .header-social-icons ul {
-    @extend .social-media-icons;
+    @include alignment (row, flex-start, center, center);
     display: flex;
-    margin-top: 10px;
     li {
         margin-right:15px;
     }
@@ -132,11 +131,6 @@ header p {
 
 
 // Media Queries 
-@media (max-width: 1150px) {
-    .header-main .header-image {
-        width:43%;
-    }
-}
 
 @media (max-width:900px) {
     .guillotine-triangle,
@@ -169,11 +163,6 @@ header p {
 }
 
 @media (max-width:550px) {
-    .header-main .header-image {
-        width:60%;
-        height:50vh;
-    }
-
     .header-content h1 {
         margin-bottom: 5px;
     }
@@ -207,17 +196,18 @@ header p {
 @media (max-height:500px) {
     .guillotine-triangle,
     .secondary-guillotine-triangle {
-        background-size: 250px;
+        background-size: 200px;
     }
+
+    .header-social-icons ul li {
+        font-size: 1rem;
+    }
+
 }
 
 @media (min-width: 812px) and (max-height:375px) {
     .header-main {
         margin-top:75px;
-    }
-
-    .header-main .header-image {
-        width:30%;
     }
     
 }

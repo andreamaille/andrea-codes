@@ -214,6 +214,9 @@ h1 p:last-child {
 .exit-responsive {
   font-size: 2rem; }
 
+.header-social-icons ul li {
+  font-size: 1.5rem; }
+
 .portfolio p {
   line-height: 1.2; }
 
@@ -223,7 +226,7 @@ h1 p:last-child {
 .skills-icons i {
   font-size: 4.5rem; }
 
-.social-media-icons i, .header-social-icons ul i {
+.social-media-icons i {
   font-size: 1.5rem; }
 
 input[type=text]::-webkit-input-placeholder,
@@ -513,15 +516,22 @@ header p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 10px; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  display: flex; }
   .header-social-icons ul li {
     margin-right: 15px; }
   .header-social-icons ul li:last-child {
     margin-right: 0; }
-
-@media (max-width: 1150px) {
-  .header-main .header-image {
-    width: 43%; } }
 
 @media (max-width: 900px) {
   .guillotine-triangle,
@@ -543,9 +553,6 @@ header p {
     width: 90%; } }
 
 @media (max-width: 550px) {
-  .header-main .header-image {
-    width: 60%;
-    height: 50vh; }
   .header-content h1 {
     margin-bottom: 5px; }
   .header-social-icons {
@@ -567,13 +574,13 @@ header p {
 @media (max-height: 500px) {
   .guillotine-triangle,
   .secondary-guillotine-triangle {
-    background-size: 250px; } }
+    background-size: 200px; }
+  .header-social-icons ul li {
+    font-size: 1rem; } }
 
 @media (min-width: 812px) and (max-height: 375px) {
   .header-main {
-    margin-top: 75px; }
-  .header-main .header-image {
-    width: 30%; } }
+    margin-top: 75px; } }
 
 @media (max-height: 414px) {
   .header-main {
@@ -734,11 +741,10 @@ nav li a:active, nav li a:focus {
 .about {
   color: #282c37;
   background-color: #f0f5f7; }
-
-.about p {
-  margin: 0;
-  margin-bottom: 15px;
-  width: 95%; }
+  .about p {
+    margin: 0;
+    margin-bottom: 15px;
+    width: 95%; }
 
 .about-content {
   display: -webkit-box;
@@ -1052,7 +1058,7 @@ nav li a:active, nav li a:focus {
       opacity: 1;
       color: #282c37; }
 
-.social-media-icons ul, .header-social-icons ul ul {
+.social-media-icons ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1067,9 +1073,9 @@ nav li a:active, nav li a:focus {
   -ms-flex-align: center;
   align-items: center;
   text-align: center; }
-  .social-media-icons ul li, .header-social-icons ul ul li {
+  .social-media-icons ul li {
     margin-right: 15px; }
-  .social-media-icons ul li:last-child, .header-social-icons ul ul li:last-child {
+  .social-media-icons ul li:last-child {
     margin-right: 0; }
 
 @media (max-width: 800px) {
