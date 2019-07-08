@@ -117,7 +117,7 @@ nav li a {
     }
 
     .desktop-nav {
-        display: none
+        display: none;
     }
 
     .show.desktop-nav {
@@ -126,10 +126,10 @@ nav li a {
 
     .show.desktop-nav {
 		position: absolute;
-		top: 0;
+		top: 3%;
 		left: 0;
 		right: 0;
-		bottom: 0;
+		bottom: 0%;
 		background: $primaryColor;
         height:100vh;
         display: flex;

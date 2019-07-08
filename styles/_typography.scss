@@ -100,9 +100,17 @@ h1 p:last-child {
     text-align: center;
 }
 
-.skills-icons i {
-    font-size: 4.5rem;
+.skills p {
+    color:$contrastColor;
+    margin:5px;
+    padding:0;
+    font-weight: 600;
 }
+
+.skills-icons i {
+    font-size: 4rem;
+}
+
 
 // contact
 .social-media-icons i {

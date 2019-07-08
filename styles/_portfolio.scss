@@ -75,6 +75,29 @@
     background-color:$backgroundColor;
 }
 
+
+
+// On Scroll
+
+.slide-in {
+    opacity: 0;
+    transition: all .5s;
+}
+
+.align-left.slide-in {
+    transform: translateX(-40%) scale(0.90);
+}
+
+.align-right.slide-in {
+    transform: translateX(40%) scale(0.90);
+}
+
+.slide-in.active {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+}
+
+
 @media (max-width: 1200px) {
     .project-details li:nth-child(odd),
     .project-details li:nth-child(even){

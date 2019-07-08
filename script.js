@@ -1,11 +1,57 @@
 const app = {}
 
+app.slideImages = function () {
+    // for app performance
+    function debounce(func, wait = 20, immediate = true) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    }
+
+    const sliderImages = document.querySelectorAll('.slide-in');
+
+    function checkSlide (e) {
+        sliderImages.forEach(sliderImage => {
+            const slideInAt = (window.scrollY + window.innerHeight);
+
+            const imageBottom = sliderImage.offsetTop + sliderImage.height;
+
+            const isHalfShown = slideInAt > sliderImage.offsetTop;
+
+            const isNotScrolledPast = window.scrollY < imageBottom;
+
+            if (isHalfShown && isNotScrolledPast) {
+                sliderImage.classList.add('active');
+            } 
+        });
+    }
+
+    window.addEventListener('scroll', debounce(checkSlide));
+}
+
+
+
+
 app.smoothScroll = function () {
     $('a').smoothScroll({
         autoFocus: false,
         easing: 'swing',
         speed: '400',
     });
+}
+
+app.random = function randomItem(optionsArray) {
+    const index = Math.floor(Math.random() * optionsArray.length);
+    return optionsArray[index];
 }
 
 app.headerClick = function () {
@@ -53,19 +99,12 @@ app.hamburger = function () {
         $('nav').toggleClass('show');
 
     });
-    // $('.hamburger').on('click', function () {
-    //     $('nav').slideToggle('show')
-    // })
-
-    // $('.exit-responsive').on('click', function () {
-    //     $('nav').slideToggle('show')
-    // })
 }
 
-app.random = function randomItem(optionsArray) {
-    const index = Math.floor(Math.random() * optionsArray.length);
-    return optionsArray[index];
-}
+
+
+
+
 
 
 //initialize the app
@@ -74,6 +113,7 @@ app.init = function () {
     app.smoothScroll();
     app.hamburger();
     app.changeColor();
+    app.slideImages();
 }
 
 //call the init function after the page loads

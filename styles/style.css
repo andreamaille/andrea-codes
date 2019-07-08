@@ -223,8 +223,14 @@ h1 p:last-child {
 .skills h3 {
   text-align: center; }
 
+.skills p {
+  color: #282c37;
+  margin: 5px;
+  padding: 0;
+  font-weight: 600; }
+
 .skills-icons i {
-  font-size: 4.5rem; }
+  font-size: 4rem; }
 
 .social-media-icons i {
   font-size: 1.5rem; }
@@ -497,8 +503,7 @@ header p {
   align-items: flex-end;
   text-align: center;
   width: 40px;
-  margin: 0 auto;
-  z-index: -10; }
+  margin: 0 auto; }
   .bars .short-bar {
     display: block;
     background-color: #282c37;
@@ -724,10 +729,10 @@ nav li a:active, nav li a:focus {
     display: block; }
   .show.desktop-nav {
     position: absolute;
-    top: 0;
+    top: 3%;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0%;
     background: #f0f5f7;
     height: 100vh;
     display: -webkit-box;
@@ -920,6 +925,28 @@ nav li a:active, nav li a:focus {
 .project-info p a:hover {
   background-color: #f0e5de; }
 
+.slide-in {
+  opacity: 0;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s; }
+
+.align-left.slide-in {
+  -webkit-transform: translateX(-40%) scale(0.9);
+  -ms-transform: translateX(-40%) scale(0.9);
+  transform: translateX(-40%) scale(0.9); }
+
+.align-right.slide-in {
+  -webkit-transform: translateX(40%) scale(0.9);
+  -ms-transform: translateX(40%) scale(0.9);
+  transform: translateX(40%) scale(0.9); }
+
+.slide-in.active {
+  opacity: 1;
+  -webkit-transform: translateX(0%) scale(1);
+  -ms-transform: translateX(0%) scale(1);
+  transform: translateX(0%) scale(1); }
+
 @media (max-width: 1200px) {
   .project-details li:nth-child(odd),
   .project-details li:nth-child(even) {
@@ -961,7 +988,9 @@ nav li a:active, nav li a:focus {
   margin: 50px 0 20px 0; }
 
 .skills li {
-  margin: 8px; }
+  text-align: center;
+  margin: 10px;
+  padding: 10px; }
 
 .in-progress-skills,
 .skills-list ul {
